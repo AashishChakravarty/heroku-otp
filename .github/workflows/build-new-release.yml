@@ -37,7 +37,7 @@ jobs:
       - name: Get OTP Version
         id: otp-version
         run: |
-          echo ::set-output name=version::${GITHUB_REF/refs\/tags\//}
+          echo ::set-output name=version::26.2
 
       - name: Download OTP Source
         run: wget https://github.com/erlang/otp/archive/OTP-${{ steps.otp-version.outputs.version }}.tar.gz
@@ -82,7 +82,7 @@ jobs:
       - name: Get OTP Version
         id: otp-version
         run: |
-          echo ::set-output name=version::${GITHUB_REF/refs\/tags\//}
+          echo ::set-output name=version::26.2
 
       - name: Get OTP Source
         uses: actions/download-artifact@v3
