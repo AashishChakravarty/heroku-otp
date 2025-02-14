@@ -43,7 +43,7 @@ jobs:
         run: wget https://github.com/erlang/otp/archive/OTP-${{ steps.otp-version.outputs.version }}.tar.gz
 
       - name: Save OTP Source
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: otp-source
           path: OTP-${{ steps.otp-version.outputs.version }}.tar.gz
